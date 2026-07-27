@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_BASE: ${{ github.event.repository.name }} # 设置 VITE_BASE 环境变量为仓库名
+          VITE_BASE: /${{ github.event.repository.name }} # 设置 VITE_BASE 环境变量为仓库名
 
       - name: Deploy to GitHub Pages
         id: deployment
